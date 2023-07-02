@@ -10,9 +10,10 @@ write().catch(err => console.log(err));
 // remove().catch(err => console.log(err));
 
 ////write message to a channel
-const conversationId = 'test';
+
 
 async function write() {
+    const conversationId = 'test';
     const result = await web.chat.postMessage({
         text: 'hello miri',
         channel: conversationId,
