@@ -1,6 +1,6 @@
 const { WebClient } = require('@slack/web-api');
 
-const token = 'xoxp-5492487209540-5475511713527-5516945483282-c47795c538338168b87f47d8f77d2394';
+const token = 'xoxp-5492487209540-5475511713527-5529577383441-c9ca2763fe32e89e1f5eb64ab994e3af';
 
 const web = new WebClient(token);
 
