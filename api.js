@@ -5,16 +5,16 @@ const token = 'xoxp-5492487209540-5475511713527-5495878040370-a4d9e2c9ea4ac486df
 const web = new WebClient(token);
 
 write().catch(err => console.log(err));
-create().catch(err => console.log(err));
-add().catch(err => console.log(err));
-remove().catch(err => console.log(err));
+// create().catch(err => console.log(err));
+// add().catch(err => console.log(err));
+// remove().catch(err => console.log(err));
 
 ////write message to a channel
 const conversationId = 'test';
 
 async function write() {
     const result = await web.chat.postMessage({
-        text: 'Hello world!2',
+        text: 'hello miri',
         channel: conversationId,
     });
     console.log(`Successfully send message ${result.ts} in conversation ${conversationId}`);
