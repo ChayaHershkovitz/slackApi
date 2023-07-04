@@ -1,6 +1,6 @@
 const { WebClient } = require('@slack/web-api');
 
-const token = 'xoxp-5492487209540-5475511713527-5524295759699-9ccf33e093c66dabd887e00bdc720a39';
+const token = 'xoxp-5492487209540-5475511713527-5524517930178-db3a5d1db9b9d77d887a196751f03362';
 
 const web = new WebClient(token);
 
@@ -16,7 +16,7 @@ write().catch(err => console.log(err));
 async function write() {
     const conversationId = 'test';
     const result = await web.chat.postMessage({
-        text: 'good morning!',
+        text: 'chaya!',
         channel: conversationId,
     });
     console.log(`Successfully send message ${result.ts} in conversation ${conversationId}`);
