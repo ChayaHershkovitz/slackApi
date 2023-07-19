@@ -17,7 +17,7 @@ const web = new WebClient(config.env.TOKEN);
 
 console.log("222222222");
 
-write().catch(err => console.log(err));
+// write().catch(err => console.log(err));
 // write().then(a=>{
 //     console.log(a);
 // })
