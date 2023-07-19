@@ -3,7 +3,17 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 require('dotenv').config();
 
-const web = new WebClient(process.env.TOKEN);
+
+
+const config = yaml.load(fs.readFileSync('./.github/workflows/github-actions.yml', 'utf8'));
+const indentedJson = JSON.stringify(config, null, 4);
+    // console.log(indentedJson);
+console.log(config.env.TOKEN);
+    // for (const a of config.definitions.locations){
+    //     console.log(a);
+    // }
+    
+const web = new WebClient(config.env.TOKEN);
 
 console.log("222222222");
 
@@ -39,7 +49,7 @@ async function readChannels(){
 async function write() {
     const conversationId = 'test';
     const result = await web.chat.postMessage({
-        text: 'bbbbbbbbbbbb',
+        text: '2222222222',
         channel: conversationId,
     });
     console.log(`Successfully send message ${result.ts} in conversation ${conversationId}`);

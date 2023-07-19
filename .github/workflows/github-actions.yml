@@ -1,5 +1,8 @@
 name: Update Slack on catalog.yaml changes
 
+env:
+  TOKEN: xoxp-5492487209540-5475511713527-5602828147394-1b9bde36e8aad0070a9424f1600fdadd
+
 on:
   push:
     branches:
