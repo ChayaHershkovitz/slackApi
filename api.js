@@ -1,10 +1,9 @@
 const { WebClient } = require('@slack/web-api');
 const yaml = require('js-yaml');
 const fs = require('fs');
+require('dotenv').config();
 
-const token = 'xoxp-5492487209540-5475511713527-5602391577571-6e6966a2c3b3bef702351c01cc209c23';
-
-const web = new WebClient(token);
+const web = new WebClient(process.env.TOKEN);
 
 console.log("aaaaaaaaaaaaaaa");
 
