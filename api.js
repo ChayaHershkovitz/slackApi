@@ -8,9 +8,10 @@ const web = new WebClient(token);
 
 console.log("aaaaaaaaaaaaaaa");
 
-write().then(a=>{
-    console.log(a);
-})
+write().catch(err => console.log(err));
+// write().then(a=>{
+//     console.log(a);
+// })
 // create().catch(err => console.log(err));
 // add().catch(err => console.log(err));
 // remove().catch(err => console.log(err));
