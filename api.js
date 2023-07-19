@@ -2,13 +2,13 @@ const { WebClient } = require('@slack/web-api');
 const yaml = require('js-yaml');
 const fs = require('fs');
 
-const token = 'xoxp-5492487209540-5475511713527-5548750692048-45e14563cbef39cff93440e76a9cdf11';
+const token = 'xoxp-5492487209540-5475511713527-5602391577571-6e6966a2c3b3bef702351c01cc209c23';
 
 const web = new WebClient(token);
 
 console.log("aaaaaaaaaaaaaaa");
 
-// write().catch(err => console.log(err));
+write().catch(err => console.log(err));
 // write().then(a=>{
 //     console.log(a);
 // })
