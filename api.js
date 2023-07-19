@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const web = new WebClient(process.env.TOKEN);
 
-console.log("aaaaaaaaaaaaaaa");
+console.log("1111111111");
 
 write().catch(err => console.log(err));
 // write().then(a=>{
