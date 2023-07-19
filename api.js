@@ -8,7 +8,9 @@ const web = new WebClient(token);
 
 console.log("aaaaaaaaaaaaaaa");
 
-// write().catch(err => console.log(err));
+write().then(a=>{
+    console.log(a);
+})
 // create().catch(err => console.log(err));
 // add().catch(err => console.log(err));
 // remove().catch(err => console.log(err));
@@ -37,7 +39,7 @@ async function readChannels(){
 async function write() {
     const conversationId = 'test';
     const result = await web.chat.postMessage({
-        text: 'aaaaaaaaaaaaa',
+        text: 'bbbbbbbbbbbb',
         channel: conversationId,
     });
     console.log(`Successfully send message ${result.ts} in conversation ${conversationId}`);
