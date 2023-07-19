@@ -23,6 +23,6 @@ jobs:
 
       - name: Build and run app.js
         run: |
-          echo "$TOKEN"
+          echo "$env:TOKEN"
           npm i
           node api
