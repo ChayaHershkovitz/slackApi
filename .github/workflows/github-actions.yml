@@ -1,7 +1,7 @@
 name: Update Slack on catalog.yaml changes
 
 env:
-  TOKEN: ${{secrets.SLACK_TOKEN}}
+  TOKEN: ${{secrets.SLACK_TOKEN.token}}
 
 on:
   push:
