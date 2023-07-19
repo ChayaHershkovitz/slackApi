@@ -1,0 +1,28 @@
+definitions:
+  locations:
+    - &arad Arad
+    - &ashdod Ashdod
+    - &dimona Dimona
+  
+  expertise:
+    - &agile Agile
+    - &devops DevOps
+    - &testing Testing
+
+members:
+  - name: Sara Litman
+    username: saralitman
+    email: saral@skyvar.co.il
+    phone: "+972583250736"
+    location:
+      - *dimona
+
+projects:
+  - name: NewSpace
+    repos:
+      - https://github.com/skyvar/newspace-core
+      - https://github.com/skyvar/newspace-dashboard
+    leads:
+      - esterlev23
+    members:
+      - esterhershberg

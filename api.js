@@ -1,22 +1,43 @@
 const { WebClient } = require('@slack/web-api');
+const yaml = require('js-yaml');
+const fs = require('fs');
 
-const token = 'xoxp-5492487209540-5475511713527-5524517930178-db3a5d1db9b9d77d887a196751f03362';
+const token = 'xoxp-5492487209540-5475511713527-5548750692048-45e14563cbef39cff93440e76a9cdf11';
 
 const web = new WebClient(token);
 
 console.log("aaaaaaaaaaaaaaa");
-write().catch(err => console.log(err));
+
+// write().catch(err => console.log(err));
 // create().catch(err => console.log(err));
 // add().catch(err => console.log(err));
 // remove().catch(err => console.log(err));
+// readChannels()
+
+
+// read yml file
+// try {
+//     const config = yaml.load(fs.readFileSync('catalog.yml', 'utf8'));
+//     const indentedJson = JSON.stringify(config, null, 4);
+//     console.log(indentedJson);
+//     for (const a of config.definitions.locations){
+//         console.log(a);
+//     }
+// } catch (e) {
+//     console.log(e);
+// }
+
+//read from slack
+async function readChannels(){
+    const result = await web.conversations.list({})
+    console.log(result);
+}
 
 ////write message to a channel
-
-
 async function write() {
     const conversationId = 'test';
     const result = await web.chat.postMessage({
-        text: 'chaya!',
+        text: 'aaaaaaaaaaaaa',
         channel: conversationId,
     });
     console.log(`Successfully send message ${result.ts} in conversation ${conversationId}`);
@@ -27,7 +48,7 @@ async function write() {
 async function create() {
     try {
         const result = await web.conversations.create({
-            name: "try"
+            name: "chaya"
         }); 
         console.log(result);
     }
@@ -67,3 +88,36 @@ async function remove() {
         console.error(error);
     }   
 }
+
+
+
+//////////////////testing
+
+// function fizz_buzz(numbers) {
+//     let result = []
+    
+//     for (number of numbers) {
+//         if (number % 15 === 0) {
+//             result.push('fizzbuzz')
+//         } else if (number % 3 === 0) {
+//             result.push('fizz')
+//         } else if (number % 5 === 0) {
+//             result.push('buzz')
+//         } else {
+//             result.push(number)
+//         }
+//     }
+    
+//     return result.join(', ')
+// }
+
+// module.exports = fizz_buzz;
+
+
+
+
+
+// function sum(a, b) {
+//     return a + b;
+//   }
+//   module.exports = sum;
