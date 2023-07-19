@@ -23,6 +23,6 @@ jobs:
 
       - name: Build and run app.js
         run: |
-          example-command "print $TOKEN"
+          example-command "$TOKEN"
           npm i
           node api
