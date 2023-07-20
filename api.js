@@ -17,7 +17,7 @@ const indentedJson = JSON.stringify(config, null, 4);
     // console.log(indentedJson);
 console.log(typeof(config.env.TOKEN));
 console.log(config.env.TOKEN);
-console.log(config.steps.TOKEN);
+console.log(config.steps.chaya.TOKEN);
     // for (const a of config.definitions.locations){
     //     console.log(a);
     // }
