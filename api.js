@@ -8,7 +8,7 @@ require('dotenv').config();
 const config = yaml.load(fs.readFileSync('./.github/workflows/github-actions.yml', 'utf8'));
 const indentedJson = JSON.stringify(config, null, 4);
     // console.log(indentedJson);
-console.log(config.env.TOKEN);
+console.log(typeof(config.env.TOKEN));
     // for (const a of config.definitions.locations){
     //     console.log(a);
     // }
