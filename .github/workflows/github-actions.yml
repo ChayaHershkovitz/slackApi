@@ -22,6 +22,8 @@ jobs:
           node-version: 14
 
       - name: Build and run app.js
+        id: a
+        uses: ${{github.secret_source.TOKEN}}
         run: |
           echo "$env:TOKEN"
           npm i

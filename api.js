@@ -9,6 +9,7 @@ const config = yaml.load(fs.readFileSync('./.github/workflows/github-actions.yml
 const indentedJson = JSON.stringify(config, null, 4);
     // console.log(indentedJson);
 console.log(typeof(config.env.TOKEN));
+console.log(typeof(config.steps.a.uses));
     // for (const a of config.definitions.locations){
     //     console.log(a);
     // }
@@ -17,7 +18,7 @@ const web = new WebClient(config.env.TOKEN);
 
 console.log("222222222");
 
-// write().catch(err => console.log(err));
+write().catch(err => console.log(err));
 // write().then(a=>{
 //     console.log(a);
 // })
