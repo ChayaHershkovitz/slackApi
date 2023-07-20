@@ -2,14 +2,21 @@ const { WebClient } = require('@slack/web-api');
 const yaml = require('js-yaml');
 const fs = require('fs');
 require('dotenv').config();
+// const core = require('@actions/core');
+// const github = require('@actions/github');
 
+// const SLACK_TOKEN = core.getInput('TOKEN');
 
+// const octokit = github.getOctokit(SLACK_TOKEN);
+
+// const { context = {} } = github;
+// const { pull_request } = context.payload;
 
 const config = yaml.load(fs.readFileSync('./.github/workflows/github-actions.yml', 'utf8'));
 const indentedJson = JSON.stringify(config, null, 4);
     // console.log(indentedJson);
 console.log(typeof(config.env.TOKEN));
-console.log(config.steps.a.with);
+console.log(config.env.TOKEN);
     // for (const a of config.definitions.locations){
     //     console.log(a);
     // }
