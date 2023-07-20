@@ -16,7 +16,8 @@ const config = yaml.load(fs.readFileSync('./.github/workflows/github-actions.yml
 const indentedJson = JSON.stringify(config, null, 4);
     // console.log(indentedJson);
 console.log(typeof(config.env.TOKEN));
-console.log(config.env.TOKEN.value);
+console.log(config.env.TOKEN);
+console.log(config.steps.TOKEN);
     // for (const a of config.definitions.locations){
     //     console.log(a);
     // }
